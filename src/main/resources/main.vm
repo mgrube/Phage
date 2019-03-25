@@ -1,0 +1,30 @@
+<center><h1>Phage Decentralized Forum System</h1></center>
+<center><img src="/phage.png"></center>
+<script>
+function join () {
+    var form = document.createElement('form');
+    form.setAttribute('method', 'get');
+    form.setAttribute('action', '/join');
+    form.style.display = 'hidden';
+    document.body.appendChild(form)
+    form.submit();
+}
+function create () {
+    var form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', '/create');
+    form.setAttribute('communityname', 'dongslol');
+    form.style.display = 'hidden';
+    document.body.appendChild(form)
+    form.submit();
+}
+</script>
+<center><button type="button" onclick="create();">Create Community</button><button type="button" onclick="join();">Join Community</button></center>
+<center>Communities you're a part of:</center>
+<tbody>
+#foreach( $community in $communities )
+    <tr><td>$obj.Name</td><td>$obj.Item2</td></tr>
+#end
+<tbody>
+
+<!-- We want to see what communities the user is a part of and what communities we've created -->

@@ -1,0 +1,14 @@
+<!-- Let's think. What does this process actually look like? -->
+<!-- Keypair is generated, identities are added, key for time period is announced. Perhaps start with a seed key?-->
+<!-- -->
+<center><h1>Create a community</h1></center>
+<center></center>
+<center>
+<form action="/create" method="post">
+<label for="say">Community Name:</label>
+<input name="communityname" id="communityname" value="Hi">
+  <div>
+    <button>Create!</button>
+  </div>
+</form>
+</center>
